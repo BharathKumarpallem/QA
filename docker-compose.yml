@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the Chroma DB storage directory to persist database entries
+      - ./chroma_db:/app/chroma_db
+    env_file:
+      - .env
+    environment:
+      # Override the Chroma DB path inside the container context
+      - CHROMA_DB_PATH=/app/chroma_db
+    restart: always
