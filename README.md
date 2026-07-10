@@ -148,3 +148,15 @@ The test suite utilizes an in-memory ephemeral ChromaDB instance and AsyncOpenAI
 ### Search & QA Endpoints
 - **POST** `/search`: Performs semantic search and returns the top matching chunks with similarity scores.
 - **POST** `/qa`: Grounded question answering (RAG) with session-based history matching and source citations.
+
+---
+
+## 📸 Live Application Demo
+
+Below is the live client dashboard interface serving on GitHub Pages, styled in the custom emerald nebula space theme:
+
+### Interactive Q&A & Citation Expansion
+![Emerald Theme QA Dashboard](docs/emerald_theme_success.png)
+
+### Screen Recording of the Application User Flow
+![SaaS Chat and Citation Flow Interaction](docs/emerald_theme_demo.webp)
