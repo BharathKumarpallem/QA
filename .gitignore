@@ -1,0 +1,27 @@
+# Python Caching & DLLs
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+venv/
+ENV/
+env/
+.venv/
+
+# Vector database local storage
+chroma_db/
+chroma_db_test/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor/OS configurations
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
