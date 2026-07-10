@@ -746,8 +746,11 @@
                             { page: 3, text: "The contract duration is 3 years.", file: "manual.pdf" }
                         ];
                     } else {
-                        answer = "I cannot find the answer to your question in the uploaded documents.";
-                        confidence = 0.0;
+                        answer = `This is a simulated demo response for your query: "${query}". In Live Mode, the FastAPI backend will vector search the document chunks stored in ChromaDB using "text-embedding-3-small". If matching passages are found with similarity scores above 0.55, GPT-4o-mini will generate a structured response with verbatim citations like the ones shown below.`;
+                        confidence = 0.85;
+                        citations = [
+                            { page: 1, text: `Simulated context chunk representing query: ${query}.`, file: "simulated_context.pdf" }
+                        ];
                     }
 
                     renderQAResponse(answer, confidence, citations);

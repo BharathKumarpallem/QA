@@ -78,7 +78,7 @@ During the implementation and automated testing of this codebase, three key code
   ```
 
 ### 4.3. DOM ID Collision in Chat Citation Chips
-- **Issue**: In `preview.html`, when multiple assistant answers were rendered, each created citation chips using indices `0, 1, 2...` as the ID suffix (`cit-snip-${idx}`). Clicking any chip always toggled the citation snippet of the *first* message on the page because `document.getElementById` always resolved to the first matching ID in the DOM.
+- **Issue**: In `index.html`, when multiple assistant answers were rendered, each created citation chips using indices `0, 1, 2...` as the ID suffix (`cit-snip-${idx}`). Clicking any chip always toggled the citation snippet of the *first* message on the page because `document.getElementById` always resolved to the first matching ID in the DOM.
 - **Correction**: Refactored the citation chip to pass `this` (the element reference) to `toggleCitationSnippet` and query the snippet class locally relative to the clicked chip.
 - **Code Diff**:
   ```diff
